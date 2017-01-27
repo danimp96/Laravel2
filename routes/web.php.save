@@ -16,25 +16,25 @@ Route::get('/', function () {
 });
 
 Route::get('login',function() {
-	return view('auth.login');
+	return view('uario');
 });
 
 Route::get('logout',function() {
-	return view('Logout');
+	return view('Logout usuario');
 });
 
 Route::get('catalog',function() {
-	return view('catalog.catalog');
+	return view('Listado peliculas');
 });
 
 Route::get('catalog/show/{id}',function($id) {
-	return view('catalog.show');
+	return view('Vista detalle pelicula '.{$id});
 });
 
 Route::get('catalog/create',function() {
-	return view('catalog.create');
+	return view('Añadir pelicula');
 });
 
 Route::get('catalog/edit/{id}',function($id) {
-	return view('catalog.edit');
+	return view('Modificar pelicula '.{$id});
 });
